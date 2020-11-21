@@ -1,7 +1,19 @@
 #!/bin/bash
-# To move folders to colab
+# Run in colab
+# To unzip and move folders to drive
 git clone https://github.com/SayanGhoshBDA/Outputs
-for i in {1..22}
+
+cd Outputs
+
+for i in {1..2}
 do
-	unzip -qq "product_images_$(printf %03d $i).zip" 
+    unzip -q "./product_images_$(printf %03d $i).zip"
 done
+
+mkdir ../product_images
+
+find -name '*.png' | xargs mv --target-directory=product_images > /dev/null 2>&1
+
+cd ..
+
+rm -r Outputs
