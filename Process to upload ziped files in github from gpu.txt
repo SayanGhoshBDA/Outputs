@@ -1,0 +1,4 @@
+Steps:
+1. First run down.sh in gpu terminal
+2. Then run add_gi.sh in gpu terminal
+3. Push to github
