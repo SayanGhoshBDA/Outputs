@@ -1,3 +1,4 @@
+# run inside product_images folder
 i=0; 
 for f in *; 
 do 
